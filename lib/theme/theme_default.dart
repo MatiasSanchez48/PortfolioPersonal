@@ -35,7 +35,7 @@ const _themeDark = ColorScheme.dark(
   primaryContainer: Color(0xFF4E342E),
   secondary: Color(0xFF26A69A),
   onSecondary: Color(0xFF80CBC4),
-  tertiary: Color(0xFF121212),
+  tertiary: Color.fromARGB(36, 242, 242, 242),
   onTertiary: Color(0xFFFFFFFF),
   error: Color(0xFFEF5350),
   surfaceTint: Color(0xFF1E1E1E),

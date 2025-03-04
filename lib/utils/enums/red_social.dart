@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio_personal/utils/utils.dart';
 
 enum RedSocial {
   gitHub,
@@ -22,45 +22,37 @@ enum RedSocial {
     final colors = context.colors;
 
     return switch (redSocial) {
-      RedSocial.gitHub => Icon(FontAwesome.github, color: colors.greyDark),
-      RedSocial.gmail => Icon(Icons.email, color: colors.greyDark),
-      RedSocial.twitter => Icon(FontAwesome.twitter, color: colors.greyDark),
-      RedSocial.itchIo => Icon(Icons.gamepad, color: colors.greyDark),
-      RedSocial.patreon => Icon(FontAwesome.gift, color: colors.greyDark),
+      RedSocial.gitHub => Icon(
+          FontAwesome.github,
+          color: colors.onSurfaceOpacity20,
+        ),
+      RedSocial.gmail => Icon(
+          Icons.email,
+          color: colors.onSurfaceOpacity20,
+        ),
+      RedSocial.twitter => Icon(
+          FontAwesome.twitter,
+          color: colors.onSurfaceOpacity20,
+        ),
+      RedSocial.itchIo => Icon(
+          Icons.gamepad,
+          color: colors.onSurfaceOpacity20,
+        ),
+      RedSocial.patreon => Icon(
+          FontAwesome.gift,
+          color: colors.onSurfaceOpacity20,
+        ),
     };
   }
 
   static void Function()? lunchRedSocial(RedSocial redSocial) =>
       switch (redSocial) {
         RedSocial.gitHub => () =>
-            _lauchUrl('https://github.com/MatiasSanchez48'),
-        RedSocial.gmail => () async {
-            final emailLaunchUri = Uri(
-              scheme: 'mailto',
-              path: 'sanchezmati48@gmail.com',
-              query: Uri.encodeFull(
-                'subject=Asunto del correo&body=Contenido del correo',
-              ),
-            );
-
-            if (await canLaunchUrl(emailLaunchUri)) {
-              await launchUrl(emailLaunchUri);
-            } else {
-              throw Exception('No se puede abrir la aplicación de correo');
-            }
-          },
-        RedSocial.twitter => () => _lauchUrl('https://x.com/SanchezMatias48'),
-        RedSocial.itchIo => () => _lauchUrl('https://matiassanchez48.itch.io'),
+            lauchUrl('https://github.com/MatiasSanchez48'),
+        RedSocial.gmail => () => openEmail('sanchezmati48@gmail.com'),
+        RedSocial.twitter => () => lauchUrl('https://x.com/SanchezMatias48'),
+        RedSocial.itchIo => () => lauchUrl('https://matiassanchez48.itch.io'),
         RedSocial.patreon => () =>
-            _lauchUrl('https://www.patreon.com/c/MatiasSanchez48'),
+            lauchUrl('https://www.patreon.com/c/MatiasSanchez48'),
       };
-
-  static Future<void> _lauchUrl(String linkRedSocial) async {
-    final url = Uri.parse(linkRedSocial);
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
-      throw Exception('Error al abrir la red social');
-    }
-  }
 }

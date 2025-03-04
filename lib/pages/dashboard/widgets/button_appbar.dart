@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_personal/extensions/context.dart';
+import 'package:portfolio_personal/extensions/extensions.dart';
 
 class ButtonAppBar extends StatefulWidget {
   const ButtonAppBar({
@@ -21,6 +23,8 @@ class _ButtonAppBarState extends State<ButtonAppBar> {
   bool _hover = false;
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: InkWell(
@@ -32,7 +36,9 @@ class _ButtonAppBarState extends State<ButtonAppBar> {
             widget.text,
             style: TextStyle(
               fontSize: 16,
-              color: _hover ? Colors.black87 : Colors.black54,
+              color: _hover
+                  ? colors.onSurfaceOpacity50
+                  : colors.onSurfaceOpacity20,
             ),
           ),
         ),

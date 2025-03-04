@@ -31,7 +31,10 @@ class AboutMe extends StatelessWidget {
             ' crear soluciones\ndigitales que combinen funcionalidad y diseño.'
             ' Mi enfoque se centra en la construcción de \naplicaciones web'
             ' modernas y escalables.',
-            style: TextStyle(color: colors.onSurfaceOpacity20),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: colors.onSurfaceOpacity20,
+            ),
           ),
           const SizedBox(height: 50),
           const Row(
@@ -65,7 +68,7 @@ class AboutMe extends StatelessWidget {
               ),
             ],
           ),
-          const Spacer(),
+          const SizedBox(height: 50),
         ],
       ),
     );

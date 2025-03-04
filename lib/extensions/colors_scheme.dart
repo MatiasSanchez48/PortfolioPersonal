@@ -5,6 +5,8 @@ extension ColorsSchemeX on ColorScheme {
 
   Color get greyDark => const Color.fromARGB(180, 30, 30, 30);
 
+  Color get surfaceOpacity30 => surface.withValues(alpha: .3);
+
   Color get onSurfaceOpacity50 => onSurface.withValues(alpha: .7);
 
   Color get onSurfaceOpacity60 => onSurface.withValues(alpha: .6);

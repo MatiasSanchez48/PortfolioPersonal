@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_personal/extensions/context.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
@@ -6,6 +7,8 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
+
     return SliverAppBar(
       pinned: true,
       titleSpacing: 100,
@@ -13,12 +16,12 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
         onTap: () {
           // Navegar al home si es necesario
         },
-        child: const Text(
+        child: Text(
           'PortFolio.',
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w600,
-            color: Colors.black,
+            color: colors.onSurface,
           ),
         ),
       ),

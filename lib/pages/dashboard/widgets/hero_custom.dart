@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
+import 'package:portfolio_personal/utils/functions/functions.dart';
 
 class HeroCustom extends StatelessWidget {
   const HeroCustom({super.key});
@@ -13,7 +14,7 @@ class HeroCustom extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: DefaultTextStyle(
         style: TextStyle(
-          color: context.colors.onSurface,
+          color: colors.onSurface,
           fontSize: 18,
           fontWeight: FontWeight.w500,
           fontFamily: context.fontFamily,
@@ -47,79 +48,24 @@ class HeroCustom extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 13,
-                color: colors.grey,
+                color: colors.onSurfaceOpacity20,
               ),
             ),
             const SizedBox(height: 50),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(colors.onSurface),
-                    shape: WidgetStatePropertyAll(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                    ),
-                  ),
-                  onPressed: () {
-                    /// TODO : scroll to projects
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 10,
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Ver proyectos',
-                          style: TextStyle(
-                            color: colors.surface,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        const SizedBox(width: 5),
-                        Icon(
-                          Icons.arrow_right_alt_rounded,
-                          color: colors.surface,
-                          size: 25,
-                        ),
-                      ],
-                    ),
-                  ),
+                CustomTextButton(
+                  title: 'Ver proyectos',
+                  onPressed: openPDF,
+                  icon: Icons.arrow_right_alt_rounded,
+                  background: colors.onSurface,
+                  themeButton: colors.surface,
                 ),
                 const SizedBox(width: 10),
-                TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(colors.surface),
-                    shape: WidgetStatePropertyAll(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        side: BorderSide(
-                          color: colors.grey,
-                          width: .8,
-                        ),
-                      ),
-                    ),
-                  ),
-                  onPressed: () {
-                    /// TODO : Download CV
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 13,
-                    ),
-                    child: Text(
-                      'Descargar CV',
-                      style: TextStyle(
-                        color: colors.onSurface,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
+                CustomTextButton(
+                  title: 'Descargar CV',
+                  onPressed: () async => openPDF(),
                 ),
               ],
             ),
