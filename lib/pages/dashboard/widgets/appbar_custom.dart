@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/context.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
+import 'package:portfolio_personal/utils/functions/functions.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarCustom({super.key});
+  const AppBarCustom({
+    required this.scrollController,
+    super.key,
+  });
+
+  ///
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +20,10 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       pinned: true,
       titleSpacing: 100,
       title: InkWell(
-        onTap: () {
-          // Navegar al home si es necesario
-        },
+        onTap: () => scroll(
+          scrollController,
+          scrollController.position.minScrollExtent,
+        ),
         child: Text(
           'PortFolio.',
           style: TextStyle(
@@ -28,11 +36,34 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Row(
           children: [
-            ButtonAppBar(onTap: () {}, text: 'Inicio'),
-            ButtonAppBar(onTap: () {}, text: 'Sobre Mi'),
-            ButtonAppBar(onTap: () {}, text: 'Contacto'),
-            ButtonAppBar(onTap: () {}, text: 'Experiencia'),
-            ButtonAppBar(onTap: () {}, text: 'Blog'),
+            ButtonAppBar(
+              onTap: () => scroll(
+                scrollController,
+                scrollController.position.minScrollExtent,
+              ),
+              text: 'Inicio',
+            ),
+            ButtonAppBar(
+              onTap: () => scroll(
+                scrollController,
+                context.height * .85,
+              ),
+              text: 'Sobre Mi',
+            ),
+            ButtonAppBar(
+              onTap: () => scroll(
+                scrollController,
+                context.height * 1.63,
+              ),
+              text: 'Proyectos',
+            ),
+            ButtonAppBar(
+              onTap: () => scroll(
+                scrollController,
+                context.height * 2.48,
+              ),
+              text: 'Contacto',
+            ),
             const IconChangeTheme(),
           ],
         ),

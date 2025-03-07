@@ -9,6 +9,7 @@ export 'custom_card.dart';
 export 'custom_chip.dart';
 export 'custom_text_button.dart';
 export 'custom_textfield.dart';
+export 'footer.dart';
 export 'hero_custom.dart';
 export 'icon_change_theme.dart';
 export 'project.dart';

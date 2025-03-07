@@ -4,7 +4,13 @@ import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
 class HeroCustom extends StatelessWidget {
-  const HeroCustom({super.key});
+  const HeroCustom({
+    required this.scrollController,
+    super.key,
+  });
+
+  ///
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -57,15 +63,18 @@ class HeroCustom extends StatelessWidget {
               children: [
                 CustomTextButton(
                   title: 'Ver proyectos',
-                  onPressed: openPDF,
+                  onPressed: () => scroll(
+                    scrollController,
+                    context.height * 1.63,
+                  ),
                   icon: Icons.arrow_right_alt_rounded,
                   background: colors.onSurface,
                   themeButton: colors.surface,
                 ),
                 const SizedBox(width: 10),
-                CustomTextButton(
+                const CustomTextButton(
                   title: 'Descargar CV',
-                  onPressed: () async => openPDF(),
+                  onPressed: openPDF,
                 ),
               ],
             ),

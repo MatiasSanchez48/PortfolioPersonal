@@ -12,13 +12,6 @@ class ViewDashboard extends StatefulWidget {
 class _ViewDashboardState extends State<ViewDashboard> {
   ///
   final ScrollController _scrollController = ScrollController();
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
@@ -32,9 +25,9 @@ class _ViewDashboardState extends State<ViewDashboard> {
       child: Scaffold(
         body: CustomScrollView(
           controller: _scrollController,
-          slivers: const [
-            AppBarCustom(),
-            BodyDashBoard(),
+          slivers: [
+            AppBarCustom(scrollController: _scrollController),
+            BodyDashBoard(scrollController: _scrollController),
           ],
         ),
       ),

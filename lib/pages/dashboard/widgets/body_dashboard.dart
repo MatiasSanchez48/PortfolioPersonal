@@ -3,7 +3,13 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
 class BodyDashBoard extends StatelessWidget {
-  const BodyDashBoard({super.key});
+  const BodyDashBoard({
+    required this.scrollController,
+    super.key,
+  });
+
+  ///
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +21,12 @@ class BodyDashBoard extends StatelessWidget {
           Container(
             height: context.height,
             color: colors.surface,
-            child: const HeroCustom(),
+            child: HeroCustom(
+              scrollController: scrollController,
+            ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 1.6,
+            height: context.height / 1.6,
             color: colors.tertiary,
             child: const AboutMe(),
           ),
@@ -30,12 +38,12 @@ class BodyDashBoard extends StatelessWidget {
             color: colors.tertiary,
             child: const ContactMe(),
           ),
-
-          // /// Footer
-          // Container(
-          //   height: MediaQuery.of(context).size.height / 2,
-          //   color: Colors.black87,
-          // ),
+          ColoredBox(
+            color: colors.surface,
+            child: Footer(
+              scrollController: scrollController,
+            ),
+          ),
         ],
       ),
     );
