@@ -1,12 +1,12 @@
 part of 'bloc_dashboard.dart';
 
 @immutable
-sealed class BlocDashboardState {
+class BlocDashboardState {
   const BlocDashboardState._({
     this.repos = const [],
   });
 
-  BlocDashboardState.desde(
+  BlocDashboardState.from(
     BlocDashboardState state, {
     List<dynamic>? repos,
   }) : this._(
@@ -24,11 +24,11 @@ class BlocDashboardStateInitial extends BlocDashboardState {
 }
 
 class BlocDashboardStateLoading extends BlocDashboardState {
-  const BlocDashboardStateLoading() : super._();
+  BlocDashboardStateLoading.from(super.state) : super.from();
 }
 
 class BlocDashboardStateLoaded extends BlocDashboardState {
-  const BlocDashboardStateLoaded(this.repos) : super._(repos: repos);
+  BlocDashboardStateLoaded.from(super.state, this.repos) : super.from();
 
   ///
   @override
@@ -36,7 +36,7 @@ class BlocDashboardStateLoaded extends BlocDashboardState {
 }
 
 class BlocDashboardStateError extends BlocDashboardState {
-  const BlocDashboardStateError(this.message) : super._();
+  BlocDashboardStateError.from(super.state, this.message) : super.from();
 
   ///
   final String message;

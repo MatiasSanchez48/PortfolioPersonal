@@ -11,18 +11,19 @@ class BlocDashboard extends Bloc<BlocDashboardEvent, BlocDashboardState> {
     on<BlocDashboardGetReposEvent>(_onGetRepos);
   }
 
+
   Future<void> _onGetRepos(
-    BlocDashboardEvent event,
+    BlocDashboardGetReposEvent event,
     Emitter<BlocDashboardState> emit,
   ) async {
     try {
-      emit(const BlocDashboardStateLoading());
+      emit(BlocDashboardStateLoading.from(state));
 
       final repos = await RepoGithub().getRepositories();
 
-      emit(BlocDashboardStateLoaded(repos ?? []));
+      emit(BlocDashboardStateLoaded.from(state, repos));
     } catch (e) {
-      emit(BlocDashboardStateError(e.toString()));
+      emit(BlocDashboardStateError.from(state, e.toString()));
     }
   }
 }

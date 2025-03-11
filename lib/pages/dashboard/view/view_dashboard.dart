@@ -12,6 +12,7 @@ class ViewDashboard extends StatefulWidget {
 class _ViewDashboardState extends State<ViewDashboard> {
   ///
   final ScrollController _scrollController = ScrollController();
+  
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;

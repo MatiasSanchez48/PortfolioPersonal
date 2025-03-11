@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/pages/dashboard/bloc/bloc_dashboard.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
 class Projects extends StatelessWidget {
@@ -32,6 +34,37 @@ class Projects extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 50),
+          BlocBuilder<BlocDashboard, BlocDashboardState>(
+            builder: (context, state) {
+
+              if (state is BlocDashboardStateLoaded) {
+                return Container(
+                  height: 30,
+                  width: 30,
+                  color: Colors.blue,
+                );
+              }
+              if (state is BlocDashboardStateError) {
+                return Container(
+                  height: 30,
+                  width: 30,
+                  color: Colors.red,
+                );
+              }
+              if (state is BlocDashboardStateLoading) {
+                return Container(
+                  height: 30,
+                  width: 30,
+                  color: Colors.yellow,
+                );
+              }
+              return Container(
+                height: 30,
+                width: 30,
+                color: Colors.deepPurple,
+              );
+            },
+          ),
           Wrap(
             spacing: 30,
             alignment: WrapAlignment.spaceAround,
