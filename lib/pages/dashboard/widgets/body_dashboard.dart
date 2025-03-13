@@ -25,8 +25,7 @@ class BodyDashBoard extends StatelessWidget {
               scrollController: scrollController,
             ),
           ),
-          Container(
-            height: context.height / 1.6,
+          ColoredBox(
             color: colors.tertiary,
             child: const AboutMe(),
           ),

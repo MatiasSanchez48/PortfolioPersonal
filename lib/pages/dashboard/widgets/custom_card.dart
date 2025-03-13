@@ -10,7 +10,6 @@ class CustomCard extends StatelessWidget {
     required this.titleProject,
     required this.descriptionProject,
     required this.listSkills,
-    required this.linkDemo,
     required this.linkCode,
     super.key,
   });
@@ -26,9 +25,6 @@ class CustomCard extends StatelessWidget {
 
   ///
   final List<String> listSkills;
-
-  ///
-  final String linkDemo;
 
   ///
   final String linkCode;
@@ -69,10 +65,18 @@ class CustomCard extends StatelessWidget {
                 ),
                 height: 300,
                 child: Center(
-                  child: Icon(
-                    Icons.image_outlined,
-                    color: colors.onSurfaceOpacity20,
-                    size: 50,
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: colors.tertiary,
+                      borderRadius: BorderRadius.circular(50),
+                      image: const DecorationImage(
+                        image: AssetImage('images/avatar.png'),
+                        fit: BoxFit.cover,
+                        opacity: .2,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -124,13 +128,9 @@ class CustomCard extends StatelessWidget {
                 CustomTextButton(
                   title: 'Codigo',
                   icon: FontAwesome.github,
-                  onPressed: () async => lauchUrl(linkCode),
-                ),
-                const SizedBox(width: 30),
-                CustomTextButton(
-                  title: 'Demo',
-                  icon: FontAwesome.share_alt,
-                  onPressed: () async => lauchUrl(linkDemo),
+                  onPressed: () async => lauchUrl(
+                    'https://github.com/MatiasSanchez48/$linkCode',
+                  ),
                 ),
               ],
             ),

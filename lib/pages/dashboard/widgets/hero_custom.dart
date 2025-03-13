@@ -39,7 +39,7 @@ class HeroCustom extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             const Text(
-              'Transformando ideas en \nexperiencias digitales',
+              'Código,creatividad\ny tecnología.',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 45,
@@ -47,10 +47,9 @@ class HeroCustom extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             Text(
-              'Desarrollador Full Stack especializado en crear soluciones web\n'
-              'innovadoras y experiencias de usuario excepcionales. Con más de'
-              ' 5\naños de experiencia en el desarrollo de aplicaciones web'
-              ' modernas.\n',
+              'Desarrollo aplicaciones web, móviles y videojuegos,combinando\n'
+              'innovación y eficiencia. Especializado en Flutter, .NET, '
+              'React y Unity\npara llevar cada idea al siguiente nivel.',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 13,

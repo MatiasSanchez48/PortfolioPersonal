@@ -5,7 +5,7 @@ class CardCustomAboutMe extends StatelessWidget {
   const CardCustomAboutMe({
     required this.iconData,
     required this.title,
-    required this.description,
+    required this.descriptions,
     super.key,
   });
 
@@ -16,15 +16,13 @@ class CardCustomAboutMe extends StatelessWidget {
   final String title;
 
   ///
-  final String description;
+  final List<String> descriptions;
 
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
 
     return SizedBox(
-      width: 400,
-      height: 220,
       child: Card(
         elevation: 5,
         color: colors.surface,
@@ -44,7 +42,7 @@ class CardCustomAboutMe extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Spacer(),
+              const SizedBox(height: 10),
               Icon(
                 iconData,
                 color: colors.onSurface,
@@ -60,17 +58,30 @@ class CardCustomAboutMe extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              Text(
-                description,
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: colors.onSurfaceOpacity20,
-                  fontSize: 8,
-                  fontWeight: FontWeight.w400,
+              ...descriptions.map(
+                (e) => Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 3),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.circle,
+                        color: colors.primary,
+                        size: 12,
+                      ),
+                      const SizedBox(width: 15),
+                      Text(
+                        e,
+                        style: TextStyle(
+                          color: colors.onSurface,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              const Spacer(),
+              const SizedBox(height: 10),
             ],
           ),
         ),

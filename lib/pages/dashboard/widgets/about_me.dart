@@ -17,59 +17,73 @@ class AboutMe extends StatelessWidget {
         fontSize: 14,
         fontWeight: FontWeight.w500,
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const SizedBox(height: 60),
-          const Text(
-            'About me',
-            style: TextStyle(fontSize: 30),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            'Con más de 5 años de experiencia en desarrollo web, me apasiona'
-            ' crear soluciones\ndigitales que combinen funcionalidad y diseño.'
-            ' Mi enfoque se centra en la construcción de \naplicaciones web'
-            ' modernas y escalables.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: colors.onSurfaceOpacity20,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 50),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(height: 60),
+            const Text(
+              'About me',
+              style: TextStyle(fontSize: 30),
             ),
-          ),
-          const SizedBox(height: 50),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              CardCustomAboutMe(
-                iconData: FontAwesome.code,
-                title: 'Desarrollo Frontend',
-                description:
-                    'Experiencia en React, Next.js, y TypeScript creando '
-                    'interfaces modernas y responsivas.',
+            const SizedBox(height: 20),
+            Text(
+              'Soy un apasionado desarrollador de software, enfocado en crear '
+              'aplicaciones modernas y eficientes. Disfruto resolviendo '
+              'problemas del mundo real a través de la tecnología y mejorando'
+              ' continuamente mis habilidades.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: colors.onSurfaceOpacity20,
               ),
-              CardCustomAboutMe(
-                iconData: FontAwesome.code_fork,
-                title: 'Desarrollo Backend',
-                description:
-                    'Construcción de APIs robustas y escalables con Node.js, '
-                    'Python y bases de datos SQL/NoSQL.',
+            ),
+            const SizedBox(height: 15),
+            Text(
+              'Con experiencia en desarrollo móvil'
+              ' (Flutter/Dart), tecnologías backend (.NET, MongoDB, SQL),'
+              ' desarrollo web (React, HTML, CSS, JavaScript) y desarrollo de'
+              ' videojuegos (Unity, C#), siempre me entusiasma aprender y'
+              ' crecer como desarrollador.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: colors.onSurfaceOpacity20,
               ),
-              CardCustomAboutMe(
-                iconData: FontAwesome.paint_brush,
-                title: 'Diseño UI/UX',
-                description: 'Creación de experiencias de usuario intuitivas y '
-                    'atractivas con atención al detalle.',
-              ),
-              CardCustomAboutMe(
-                iconData: FontAwesome.magic,
-                title: 'Optimización',
-                description: 'Mejora del rendimiento y la accesibilidad para'
-                    ' experiencias web excepcionales..',
-              ),
-            ],
-          ),
-          const SizedBox(height: 50),
-        ],
+            ),
+            const SizedBox(height: 50),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CardCustomAboutMe(
+                  iconData: FontAwesome.code,
+                  title: '💻 Software Development',
+                  descriptions: [
+                    'Mobile Development: Flutter, Dart',
+                    'Backend: .NET, MongoDB, SQL',
+                    'Web Development: React, HTML, CSS, JavaScript',
+                    'APIs and Data Consumption: API design and consumption',
+                  ],
+                ),
+                CardCustomAboutMe(
+                  iconData: FontAwesome.code_fork,
+                  title: '🎮 Game Development',
+                  descriptions: [
+                    'Game Engines: Unity (C#)',
+                    'Game Mechanics: 2D/3D movement, physics, shooting mechanics',
+                    'Multiplayer: Basic implementation with Photon/Netcode',
+                    'Platforms: PC',
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 35),
+            Divider(
+              height: .1,
+              color: colors.onSurfaceOpacity50,
+            ),
+            const SizedBox(height: 35),
+          ],
+        ),
       ),
     );
   }

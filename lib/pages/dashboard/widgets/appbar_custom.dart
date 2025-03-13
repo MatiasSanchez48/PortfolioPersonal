@@ -24,13 +24,29 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
           scrollController,
           scrollController.position.minScrollExtent,
         ),
-        child: Text(
-          'PortFolio.',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w600,
-            color: colors.onSurface,
-          ),
+        child: Row(
+          children: [
+            Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                color: colors.tertiary,
+                borderRadius: BorderRadius.circular(50),
+                image: const DecorationImage(
+                  image: AssetImage('images/avatar.png'),
+                ),
+              ),
+            ),
+            const SizedBox(width: 15),
+            Text(
+              'PortFolio.',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w600,
+                color: colors.onSurface,
+              ),
+            ),
+          ],
         ),
       ),
       actions: [

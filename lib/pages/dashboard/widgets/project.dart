@@ -36,59 +36,28 @@ class Projects extends StatelessWidget {
           const SizedBox(height: 50),
           BlocBuilder<BlocDashboard, BlocDashboardState>(
             builder: (context, state) {
-
-              if (state is BlocDashboardStateLoaded) {
-                return Container(
-                  height: 30,
-                  width: 30,
-                  color: Colors.blue,
-                );
-              }
-              if (state is BlocDashboardStateError) {
-                return Container(
-                  height: 30,
-                  width: 30,
-                  color: Colors.red,
-                );
-              }
               if (state is BlocDashboardStateLoading) {
-                return Container(
-                  height: 30,
-                  width: 30,
-                  color: Colors.yellow,
+                return const Center(
+                  child: CircularProgressIndicator(),
                 );
               }
-              return Container(
-                height: 30,
-                width: 30,
-                color: Colors.deepPurple,
+              return Wrap(
+                spacing: 30,
+                alignment: WrapAlignment.spaceAround,
+                children: state.repos
+                    .take(3)
+                    .map(
+                      (project) => CustomCard(
+                        ulrImage: project.htmlUrl ?? '',
+                        titleProject: project.name ?? '',
+                        descriptionProject: project.description ?? '...',
+                        linkCode: project.name ?? '',
+                        listSkills: [project.language ?? ''],
+                      ),
+                    )
+                    .toList(),
               );
             },
-          ),
-          Wrap(
-            spacing: 30,
-            alignment: WrapAlignment.spaceAround,
-
-            /// TODO: Cambiar por la lista de proyectos de mi github
-            children: [1, 2, 3, 4]
-                .take(3)
-                .map(
-                  (e) => const CustomCard(
-                    ulrImage: 'assets/images/Proyecto1.png',
-                    titleProject: 'Proyecto 1',
-                    descriptionProject:
-                        ';ashdahsj dkalsdh as jh alkjd hsakjdhasjk lshkjslhajks dhask hasjkl hlkashdf jkalhljkhgajkl hgfajlkdghajfkh gjkdashf kjahdjkh lkjha jlkah lakjhdjhf lkajhglkafhkjfdhg kljdahg aj lkgljkg agfda kjl',
-                    linkDemo: '',
-                    linkCode: '',
-                    listSkills: [
-                      'asd',
-                      'asddasadsa',
-                      'asdasddsads',
-                      'adsasd',
-                    ],
-                  ),
-                )
-                .toList(),
           ),
           const SizedBox(height: 50),
         ],

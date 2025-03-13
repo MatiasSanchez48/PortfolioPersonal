@@ -8,13 +8,13 @@ class BlocDashboardState {
 
   BlocDashboardState.from(
     BlocDashboardState state, {
-    List<dynamic>? repos,
+    List<Project>? repos,
   }) : this._(
           repos: repos ?? state.repos,
         );
 
   ///
-  final List<dynamic> repos;
+  final List<Project> repos;
 
   List<Object> get props => [];
 }
@@ -32,7 +32,7 @@ class BlocDashboardStateLoaded extends BlocDashboardState {
 
   ///
   @override
-  final List<dynamic> repos;
+  final List<Project> repos;
 }
 
 class BlocDashboardStateError extends BlocDashboardState {
