@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// TODO: Add description
+/// Theme Default App
 final themeDefault = ThemeData(
   fontFamily: GoogleFonts.pressStart2p().fontFamily,
-  colorScheme: _themeDefault,
+  colorScheme: _colorSchemeDefault,
   useMaterial3: true,
 );
 
-// TODO: Add description
-const _themeDefault = ColorScheme.light(
+/// ColorScheme Default App
+const _colorSchemeDefault = ColorScheme.light(
   primary: Color(0xFFFD9A00),
   onPrimary: Color(0xFFAE8A68),
   primaryContainer: Color(0xFFFFF8EE),
@@ -21,15 +21,16 @@ const _themeDefault = ColorScheme.light(
   surfaceTint: Color(0xFFFFFFFF),
   shadow: Color(0xFF1E1E1E),
 );
-// TODO: Add description
+
+/// Theme Dark Default App
 final themeDark = ThemeData(
   fontFamily: GoogleFonts.pressStart2p().fontFamily,
-  colorScheme: _themeDark,
+  colorScheme: _colorSchemeDark,
   useMaterial3: true,
 );
 
-// TODO: Add description
-const _themeDark = ColorScheme.dark(
+/// Color Scheme Dark App
+const _colorSchemeDark = ColorScheme.dark(
   primary: Color(0xFFFFA726),
   onPrimary: Color(0xFFF5E0C3),
   primaryContainer: Color(0xFF4E342E),

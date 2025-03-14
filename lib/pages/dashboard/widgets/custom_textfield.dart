@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template CustomTextField}
+/// Custom TextField for App
+/// {@endtemplate}
 class CustomTextField extends StatelessWidget {
+  /// {@macro CustomTextField}
   const CustomTextField({
     required this.label,
     super.key,
     this.maxLines = 1,
   });
 
-  ///
+  /// Label of TextField.
   final String label;
 
-  ///
+  /// MaxLines of TextField.
   final int maxLines;
 
   @override
@@ -19,7 +23,6 @@ class CustomTextField extends StatelessWidget {
     final colors = context.colors;
 
     return TextField(
-      
       maxLines: maxLines,
       style: TextStyle(
         color: colors.onSurface,

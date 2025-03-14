@@ -3,13 +3,17 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
+/// {@template Footer}
+/// Footer for App.
+/// {@endtemplate}
 class Footer extends StatelessWidget {
+  /// {@macro Footer}
   const Footer({
     required this.scrollController,
     super.key,
   });
 
-  ///
+  /// Scroll Controller to scroll.
   final ScrollController scrollController;
 
   @override

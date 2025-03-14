@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio_personal/app/bloc/bloc_app.dart';
-
+/// {@template IconChangeTheme}
+/// Icon for change theme in the app.
+/// {@endtemplate}
 class IconChangeTheme extends StatelessWidget {
+  /// {@macro IconChangeTheme}
   const IconChangeTheme({super.key});
 
   @override

@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_personal/extensions/context.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template ButtonAppBar}
+/// Button for AppBar Custom go to diferent pages
+/// {@endtemplate}
 class ButtonAppBar extends StatefulWidget {
+  /// {@macro ButtonAppBar}
   const ButtonAppBar({
     required this.text,
     required this.onTap,
     super.key,
   });
 
-  ///
+  ///Text to show in the button
   final String text;
 
-  ///
+  ///Function to call when the button is tapped.
   final VoidCallback onTap;
 
   @override
@@ -20,7 +23,9 @@ class ButtonAppBar extends StatefulWidget {
 }
 
 class _ButtonAppBarState extends State<ButtonAppBar> {
+  ///State for hover the button.
   bool _hover = false;
+
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;

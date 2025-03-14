@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template CardContact}
+/// Card for contact me.
+/// {@endtemplate}
 class CardContact extends StatelessWidget {
+  /// {@macro CardContact}
   const CardContact({
     required this.iconData,
     required this.label,
@@ -9,13 +13,13 @@ class CardContact extends StatelessWidget {
     super.key,
   });
 
-  ///
+  /// Icon to display.
   final IconData iconData;
 
-  ///
+  /// Label to display under icon.
   final String label;
 
-  ///
+  /// text to display under label.
   final String text;
 
   @override

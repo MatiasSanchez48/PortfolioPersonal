@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template CustomChip}
+/// Custom Chip for Dashboard
+/// {@endtemplate}
 class CustomChip extends StatelessWidget {
+  /// {@macro CustomChip}
   const CustomChip({
     required this.title,
     this.backgroundColor,
@@ -9,13 +13,13 @@ class CustomChip extends StatelessWidget {
     super.key,
   });
 
-  ///
+  /// Title of the Chip
   final String title;
 
-  ///
+  /// Color of the Chip background.
   final Color? backgroundColor;
 
-  ///
+  /// Color of the Chip text.
   final Color? textColor;
 
   @override

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
+/// {@template ViewDashboard}
+/// View for Dashboard page Hero, About me, Projects,etc.
+/// {@endtemplate}
 class ViewDashboard extends StatefulWidget {
+  /// {@macro ViewDashboard}
   const ViewDashboard({super.key});
 
   @override
@@ -10,9 +14,9 @@ class ViewDashboard extends StatefulWidget {
 }
 
 class _ViewDashboardState extends State<ViewDashboard> {
-  ///
+  /// Scroll controller.
   final ScrollController _scrollController = ScrollController();
-  
+
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;

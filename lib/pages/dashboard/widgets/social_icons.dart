@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/utils/enums/enums.dart';
-
+/// {@template SocialIcons}
+/// Social Icons for App Dashboard.
+/// {@endtemplate}
 class SocialIcons extends StatelessWidget {
+  /// {@macro SocialIcons}
   const SocialIcons({super.key});
 
   @override

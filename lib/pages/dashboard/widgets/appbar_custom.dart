@@ -3,13 +3,20 @@ import 'package:portfolio_personal/extensions/context.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
+/// {@template AppBarCustom}
+/// AppBar to App Logo, About me, Projects, Contact,etc.
+/// {@endtemplate}
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
+  /// {@macro AppBarCustom}
   const AppBarCustom({
     required this.scrollController,
     super.key,
   });
 
-  ///
+  @override
+  Size get preferredSize => const Size.fromHeight(200);
+
+  /// Scroll controller to scroll to a specific position.
   final ScrollController scrollController;
 
   @override
@@ -87,7 +94,4 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       ],
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(200);
 }

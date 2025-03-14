@@ -4,7 +4,11 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
+/// {@template CustomCard}
+/// Custom card for project card.
+/// {@endtemplate}
 class CustomCard extends StatelessWidget {
+  /// {@macro CustomCard}
   const CustomCard({
     required this.ulrImage,
     required this.titleProject,
@@ -14,19 +18,19 @@ class CustomCard extends StatelessWidget {
     super.key,
   });
 
-  ///
+  /// Url image of project card.
   final String ulrImage;
 
-  ///
+  /// Title or name of project card.
   final String titleProject;
 
-  ///
+  /// Description of project card.
   final String descriptionProject;
 
-  ///
+  /// List of skills of project card.
   final List<String> listSkills;
 
-  ///
+  /// Link of code from github of project card.
   final String linkCode;
 
   @override

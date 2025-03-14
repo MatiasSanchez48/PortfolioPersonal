@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template CustomTextButton}
+/// Custom Text Button for App.
+/// {@endtemplate}
 class CustomTextButton extends StatelessWidget {
+  /// {@macro CustomTextButton}
   const CustomTextButton({
     required this.title,
     this.icon,
@@ -11,19 +15,19 @@ class CustomTextButton extends StatelessWidget {
     super.key,
   });
 
-  ///
+  /// Title of button.
   final String title;
 
-  ///
+  /// Icon of button.
   final IconData? icon;
 
-  ///
+  /// Function of button.
   final VoidCallback? onPressed;
 
-  ///
+  /// Background of button.
   final Color? background;
 
-  ///
+  /// Theme of button.
   final Color? themeButton;
 
   @override

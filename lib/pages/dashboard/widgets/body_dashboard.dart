@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
+/// {@template BodyDashBoard}
+/// Body for Dashboard page.
+/// {@endtemplate}
 class BodyDashBoard extends StatelessWidget {
+  /// {@macro BodyDashBoard}
   const BodyDashBoard({
     required this.scrollController,
     super.key,
   });
 
-  ///
+  /// Scroll controller to scroll to different sections.
   final ScrollController scrollController;
 
   @override

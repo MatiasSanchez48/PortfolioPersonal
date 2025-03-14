@@ -4,7 +4,11 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
+/// {@template ContactMe}
+/// Contact me section of dashboard with form.
+/// {@endtemplate}
 class ContactMe extends StatelessWidget {
+  /// {@macro ContactMe}
   const ContactMe({super.key});
 
   @override

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
+/// {@template CardCustomAboutMe}
+/// Card for about me section of dashboard.
+/// {@endtemplate}
 class CardCustomAboutMe extends StatelessWidget {
+  /// {@macro CardCustomAboutMe}
   const CardCustomAboutMe({
     required this.iconData,
     required this.title,
@@ -9,13 +13,13 @@ class CardCustomAboutMe extends StatelessWidget {
     super.key,
   });
 
-  ///
+  /// Icon to show in card.
   final IconData iconData;
 
-  ///
+  /// Title to show in card.
   final String title;
 
-  ///
+  /// List of descriptions to show in card.
   final List<String> descriptions;
 
   @override

@@ -24,29 +24,41 @@ class BlocDashboardState {
   List<Object> get props => [];
 }
 
-/// {@template BlocDashboardState}
-/// State for [BlocDashboard]
+/// {@template BlocDashboardStateInitial}
+/// State `initial` for [BlocDashboard]
 /// {@endtemplate}
 class BlocDashboardStateInitial extends BlocDashboardState {
-  /// {@macro BlocDashboardState}
+  /// {@macro BlocDashboardStateInitial}
   const BlocDashboardStateInitial() : super._();
 }
 
+/// {@template BlocDashboardStateLoading}
+/// State `loading` for [BlocDashboard]
+/// {@endtemplate}
 class BlocDashboardStateLoading extends BlocDashboardState {
+  /// {@macro BlocDashboardStateLoading}
   BlocDashboardStateLoading.from(super.state) : super.from();
 }
 
+/// {@template BlocDashboardStateLoaded}
+/// State `loaded` for [BlocDashboard]
+/// {@endtemplate}
 class BlocDashboardStateLoaded extends BlocDashboardState {
+  /// {@macro BlocDashboardStateLoaded}
   BlocDashboardStateLoaded.from(super.state, this.repos) : super.from();
 
-  ///
+  /// List of [Project] to display
   @override
   final List<Project> repos;
 }
 
+/// {@template BlocDashboardStateError}
+/// State `error` for [BlocDashboard]
+/// {@endtemplate}
 class BlocDashboardStateError extends BlocDashboardState {
+  /// {@macro BlocDashboardStateError}
   BlocDashboardStateError.from(super.state, this.message) : super.from();
 
-  ///
+  /// Error message to display
   final String message;
 }

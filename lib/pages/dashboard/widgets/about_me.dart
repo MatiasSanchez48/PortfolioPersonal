@@ -3,7 +3,11 @@ import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
+/// {@template AboutMe}
+/// About me section of dashboard
+/// {@endtemplate}
 class AboutMe extends StatelessWidget {
+  /// {@macro AboutMe}
   const AboutMe({super.key});
 
   @override

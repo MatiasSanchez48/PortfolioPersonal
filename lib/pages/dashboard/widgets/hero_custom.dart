@@ -3,13 +3,17 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
+/// {@template HeroCustom}
+/// Hero for App.
+/// {@endtemplate}
 class HeroCustom extends StatelessWidget {
+  /// {@macro HeroCustom}
   const HeroCustom({
     required this.scrollController,
     super.key,
   });
 
-  ///
+  /// Scroll Controller to scroll to the next section.
   final ScrollController scrollController;
 
   @override

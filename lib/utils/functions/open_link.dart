@@ -3,7 +3,7 @@ import 'dart:html' as html;
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-///
+/// Launch url on web.
 Future<void> lauchUrl(String linkRedSocial) async {
   final url = Uri.parse(linkRedSocial);
   if (await canLaunchUrl(url)) {
@@ -13,6 +13,7 @@ Future<void> lauchUrl(String linkRedSocial) async {
   }
 }
 
+/// Open email on web.
 Future<void> openEmail(String email) async {
   final emailLaunchUri = Uri(
     scheme: 'mailto',
@@ -30,6 +31,7 @@ Future<void> openEmail(String email) async {
   }
 }
 
+/// Open pdf on web and download.
 Future<void> openPDF() async {
   try {
     final data = await rootBundle.load('assets/pdf/cv.pdf');

@@ -4,11 +4,17 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:portfolio_personal/models/project_model.dart';
 
+/// {@template RepoGithub}
+/// Repository for Github to get projects.
+/// {@endtemplate}
+
 class RepoGithub {
+  /// Url of the api
   static const String url = 'https://api.github.com/';
 
-  final Dio _dio = Dio();
+  final _dio = Dio();
 
+  /// Get repositories from github.
   Future<List<Project>> getRepositories() async {
     try {
       final response = await _dio.get(

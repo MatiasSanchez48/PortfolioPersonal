@@ -4,7 +4,11 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/bloc/bloc_dashboard.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
+/// {@template Projects}
+/// Projects section of dashboard.
+/// {@endtemplate}
 class Projects extends StatelessWidget {
+  /// {@macro Projects}
   const Projects({super.key});
 
   @override

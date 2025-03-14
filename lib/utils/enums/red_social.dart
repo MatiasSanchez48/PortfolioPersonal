@@ -3,12 +3,16 @@ import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
+/// {@template RepoGithub}
+/// Enum for Red Social of App.
+/// {@endtemplate}
 enum RedSocial {
   gitHub,
   gmail,
   linkedIn,
   itchIo;
 
+  /// get name of red social.
   static String name(RedSocial redSocial) => switch (redSocial) {
         RedSocial.gitHub => 'GitHub',
         RedSocial.gmail => 'Gmail',
@@ -16,6 +20,7 @@ enum RedSocial {
         RedSocial.linkedIn => 'Linkedin',
       };
 
+  /// get icon of red social.
   static Icon icon(RedSocial redSocial, BuildContext context) {
     final colors = context.colors;
 
@@ -39,6 +44,7 @@ enum RedSocial {
     };
   }
 
+  /// lunch red social on web.
   static void Function()? lunchRedSocial(RedSocial redSocial) =>
       switch (redSocial) {
         RedSocial.linkedIn => () =>
