@@ -3,5 +3,109 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
+    },
+    "aboutMePageDescription": "Enfocado en crear aplicaciones modernas y eficientes. Disfruto resolviendo problemas del mundo real a través de la tecnología y mejorando continuamente mis habilidades.",
+    "@aboutMePageDescription": {
+        "description": ""
+    },
+    "aboutMePageDescriptionPartTwo": "Con experiencia en desarrollo móvil (Flutter/Dart), tecnologías backend (.NET, MongoDB, SQL), desarrollo web (React, HTML, CSS, JavaScript) y desarrollo de videojuegos (Unity, C#), siempre me entusiasmado a aprender y crecer como desarrollador.",
+    "@aboutMePageDescriptionPartTwo": {
+        "description": ""
+    },
+    "aboutMePageTechnologies": "Technologies",
+    "@aboutMePageTechnologies": {
+        "description": ""
+    },
+    "contactPageDescription": "¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas y ayudarte a hacerlas \nrealidad.",
+    "@contactPageDescription": {
+        "description": ""
+    },
+    "contactPageSendMessage": "Envíame un mensaje",
+    "@contactPageSendMessage": {
+        "description": ""
+    },
+    "contactPageFormDescription": "Completa el formulario y me pondré en contacto contigo lo antes posible.",
+    "@contactPageFormDescription": {
+        "description": ""
+    },
+    "contactPageSendMessageButton": "Enviar mensaje",
+    "@contactPageSendMessageButton": {
+        "description": ""
+    },
+    "footerPageDescription": "Creando experiencias digitales excepcionales con pasión y \ndedicación.",
+    "@footerPageDescription": {
+        "description": ""
+    },
+    "footerPageAutor": "© 2025 Matias Sanchez. Todos los derechos reservados.",
+    "@footerPageAutor": {
+        "description": ""
+    },
+    "heroPageWelcome": "Bienvenido a mi portafolio",
+    "@heroPageWelcome": {
+        "description": ""
+    },
+    "heroPageDescription": "Código,creatividad\ny tecnología.",
+    "@heroPageDescription": {
+        "description": ""
+    },
+    "heroPageDescriptionPartTwo": "Desarrollo aplicaciones web, móviles y videojuegos,combinando\ninnovación y eficiencia. Especializado en Flutter, .NET, React y Unity\npara llevar cada idea al siguiente nivel.",
+    "@heroPageDescriptionPartTwo": {
+        "description": ""
+    },
+    "heroPageShowProjects": "Ver proyectos",
+    "@heroPageShowProjects": {
+        "description": ""
+    },
+    "heroPageDowloadCV": "Descargar CV",
+    "@heroPageDowloadCV": {
+        "description": ""
+    },
+    "projectPageTitle": "Proyectos Destacados",
+    "@projectPageTitle": {
+        "description": ""
+    },
+    "projectPageDescription": "Una selección de mis trabajos más recientes e innovadores en desarrollo web y \naplicaciones.",
+    "@projectPageDescription": {
+        "description": ""
+    },
+    "commonLinksText": "Enlaces",
+    "@commonLinksText": {
+        "description": ""
+    },
+    "commonSocialNetworksText": "Redes Sociales",
+    "@commonSocialNetworksText": {
+        "description": ""
+    },
+    "commonAboutMeText": "Sobre Mi",
+    "@commonAboutMeText": {
+        "description": ""
+    },
+    "commonStartText": "Inicio",
+    "@commonStartText": {
+        "description": ""
+    },
+    "commonProjectsText": "Proyectos",
+    "@commonProjectsText": {
+        "description": ""
+    },
+    "commonContactText": "Contacto",
+    "@commonContactText": {
+        "description": ""
+    },
+    "commonNameText": "Nombre",
+    "@commonNameText": {
+        "description": ""
+    },
+    "commonEmailText": "Email",
+    "@commonEmailText": {
+        "description": ""
+    },
+    "commonMessageText": "Tu Mensaje",
+    "@commonMessageText": {
+        "description": ""
+    },
+    "commonCodeText": "Código",
+    "@commonCodeText": {
+        "description": ""
     }
 }

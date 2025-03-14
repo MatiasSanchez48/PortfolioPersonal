@@ -2,6 +2,110 @@
     "@@locale": "en",
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+        "description": "Text displayed in the AppBar of the counter page"
+    },
+    "aboutMePageDescription": "Focused on creating modern and efficient applications. I enjoy solving real-world problems through technology and continuously improving my skills.",
+    "@aboutMePageDescription": {
+        "description": ""
+    },
+    "aboutMePageDescriptionPartTwo": "With experience in mobile development (Flutter/Dart), backend technologies (.NET, MongoDB, SQL), web development (React, HTML, CSS, JavaScript), and game development (Unity, C#), I am always eager to learn and grow as a developer.",
+    "@aboutMePageDescriptionPartTwo": {
+        "description": ""
+    },
+    "aboutMePageTechnologies": "Technologies",
+    "@aboutMePageTechnologies": {
+        "description": ""
+    },
+    "contactPageDescription": "Do you have a project in mind? I’d love to hear your ideas and help make them a reality.",
+    "@contactPageDescription": {
+        "description": ""
+    },
+    "contactPageSendMessage": "Send me a message",
+    "@contactPageSendMessage": {
+        "description": ""
+    },
+    "contactPageFormDescription": "Fill out the form, and I’ll get in touch with you as soon as possible.",
+    "@contactPageFormDescription": {
+        "description": ""
+    },
+    "contactPageSendMessageButton": "Send message",
+    "@contactPageSendMessageButton": {
+        "description": ""
+    },
+    "footerPageDescription": "Creating exceptional digital experiences with passion and dedication.",
+    "@footerPageDescription": {
+        "description": ""
+    },
+    "footerPageAutor": "© 2025 Matias Sanchez. All rights reserved.",
+    "@footerPageAutor": {
+        "description": ""
+    },
+    "heroPageWelcome": "Welcome to my portfolio",
+    "@heroPageWelcome": {
+        "description": ""
+    },
+    "heroPageDescription": "Code, creativity,\nand technology.",
+    "@heroPageDescription": {
+        "description": ""
+    },
+    "heroPageDescriptionPartTwo": "I develop web and mobile applications as well as video games, combining innovation and efficiency. Specialized in Flutter, .NET, React, and Unity to take every idea to the next level.",
+    "@heroPageDescriptionPartTwo": {
+        "description": ""
+    },
+    "heroPageShowProjects": "View projects",
+    "@heroPageShowProjects": {
+        "description": ""
+    },
+    "heroPageDowloadCV": "Download CV",
+    "@heroPageDowloadCV": {
+        "description": ""
+    },
+    "projectPageTitle": "Featured Projects",
+    "@projectPageTitle": {
+        "description": ""
+    },
+    "projectPageDescription": "A selection of my most recent and innovative work in web and application development.",
+    "@projectPageDescription": {
+        "description": ""
+    },
+    "commonLinksText": "Links",
+    "@commonLinksText": {
+        "description": ""
+    },
+    "commonSocialNetworksText": "Social Networks",
+    "@commonSocialNetworksText": {
+        "description": ""
+    },
+    "commonAboutMeText": "About Me",
+    "@commonAboutMeText": {
+        "description": ""
+    },
+    "commonStartText": "Home",
+    "@commonStartText": {
+        "description": ""
+    },
+    "commonProjectsText": "Projects",
+    "@commonProjectsText": {
+        "description": ""
+    },
+    "commonContactText": "Contact",
+    "@commonContactText": {
+        "description": ""
+    },
+    "commonNameText": "Name",
+    "@commonNameText": {
+        "description": ""
+    },
+    "commonEmailText": "Email",
+    "@commonEmailText": {
+        "description": ""
+    },
+    "commonMessageText": "Your Message",
+    "@commonMessageText": {
+        "description": ""
+    },
+    "commonCodeText": "Code",
+    "@commonCodeText": {
+        "description": ""
     }
 }

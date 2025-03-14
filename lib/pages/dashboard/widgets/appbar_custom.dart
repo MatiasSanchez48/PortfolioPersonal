@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:portfolio_personal/app/bloc/bloc_app.dart';
 import 'package:portfolio_personal/extensions/context.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
-import 'package:portfolio_personal/utils/functions/functions.dart';
+import 'package:portfolio_personal/utils/utils.dart';
 
 /// {@template AppBarCustom}
 /// AppBar to App Logo, About me, Projects, Contact,etc.
@@ -22,6 +25,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return SliverAppBar(
       pinned: true,
@@ -64,30 +68,60 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                 scrollController,
                 scrollController.position.minScrollExtent,
               ),
-              text: 'Inicio',
+              text: l10n.commonStartText,
             ),
             ButtonAppBar(
               onTap: () => scroll(
                 scrollController,
                 context.height * .9,
               ),
-              text: 'Sobre Mi',
+              text: l10n.commonAboutMeText,
             ),
             ButtonAppBar(
               onTap: () => scroll(
                 scrollController,
                 context.height * 1.63,
               ),
-              text: 'Proyectos',
+              text: l10n.commonProjectsText,
             ),
             ButtonAppBar(
               onTap: () => scroll(
                 scrollController,
                 context.height * 2.48,
               ),
-              text: 'Contacto',
+              text: l10n.commonContactText,
             ),
             const IconChangeTheme(),
+            const SizedBox(width: 20),
+            SizedBox(
+              width: 200,
+              height: 100,
+              child: BlocBuilder<BlocApp, BlocAppState>(
+                builder: (context, state) {
+                  return ListTile(
+                    title: Text(state.lenguage.name),
+                    trailing: DropdownButton<Lenguages>(
+                      value: state.lenguage,
+                      onChanged: (Lenguages? newValue) {
+                        if (newValue != null) {
+                          context.read<BlocApp>().add(
+                                BlocAppEventChangeLenguage(
+                                  lenguage: newValue,
+                                ),
+                              );
+                        }
+                      },
+                      items: Lenguages.values.map((Lenguages language) {
+                        return DropdownMenuItem<Lenguages>(
+                          value: language,
+                          child: Text(language.name),
+                        );
+                      }).toList(),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
         const SizedBox(width: 100),

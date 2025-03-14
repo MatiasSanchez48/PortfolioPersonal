@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/bloc/bloc_dashboard.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
@@ -14,6 +15,7 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return DefaultTextStyle(
       style: TextStyle(
@@ -26,11 +28,10 @@ class Projects extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 100),
-          const Text('Proyectos Destacados'),
+          Text(l10n.projectPageTitle),
           const SizedBox(height: 20),
           Text(
-            'Una selección de mis trabajos más recientes e innovadores'
-            ' en desarrollo web y \naplicaciones.',
+            l10n.projectPageDescription,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: colors.onSurfaceOpacity20,

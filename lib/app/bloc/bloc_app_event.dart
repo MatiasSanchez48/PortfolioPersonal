@@ -20,3 +20,14 @@ class BlocAppEventToggleTheme extends BlocAppEvent {
   /// Theme dark
   final bool themeDark;
 }
+
+/// {@template BlocAppEventChangeLenguage}
+/// Event to Change Lenguage
+/// {@endtemplate}
+class BlocAppEventChangeLenguage extends BlocAppEvent {
+  /// {@macro BlocAppEventChangeLenguage}
+  const BlocAppEventChangeLenguage({required this.lenguage});
+
+  /// Theme dark
+  final Lenguages lenguage;
+}

@@ -8,15 +8,18 @@ abstract class BlocAppState {
 
   const BlocAppState._({
     required this.theme,
+    this.lenguage = Lenguages.es,
     this.themeDark = false,
   });
 
-  BlocAppState.desde(
+  BlocAppState.from(
     BlocAppState otro, {
     ThemeData? theme,
     bool? themeDark,
+    Lenguages? lenguage,
   }) : this._(
           themeDark: themeDark ?? otro.themeDark,
+          lenguage: lenguage ?? otro.lenguage,
           theme: theme ?? otro.theme,
         );
 
@@ -25,6 +28,9 @@ abstract class BlocAppState {
 
   /// theme is dark
   final bool themeDark;
+
+  /// lenguage of the app.
+  final Lenguages lenguage;
 
   List<Object> get props => [
         themeDark,
@@ -45,9 +51,10 @@ class BlocAppStateInitial extends BlocAppState {
 /// {@endtemplate}
 class BlocAppUpdatedState extends BlocAppState {
   /// {@macro BlocAppUpdatedState}
-  BlocAppUpdatedState.desde(
+  BlocAppUpdatedState.from(
     super.otro, {
+    super.lenguage,
     super.themeDark,
     super.theme,
-  }) : super.desde();
+  }) : super.from();
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
@@ -36,6 +37,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return SizedBox(
       width: 500,
@@ -130,7 +132,7 @@ class CustomCard extends StatelessWidget {
               children: [
                 const SizedBox(width: 25),
                 CustomTextButton(
-                  title: 'Codigo',
+                  title: l10n.commonCodeText,
                   icon: FontAwesome.github,
                   onPressed: () async => lauchUrl(
                     'https://github.com/MatiasSanchez48/$linkCode',

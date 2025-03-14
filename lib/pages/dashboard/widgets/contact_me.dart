@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
@@ -14,6 +15,7 @@ class ContactMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return DefaultTextStyle(
       style: TextStyle(
@@ -25,11 +27,10 @@ class ContactMe extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 50),
-          const Text('Contacto'),
+          Text(l10n.commonContactText),
           const SizedBox(height: 20),
           Text(
-            '¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas'
-            ' y ayudarte a hacerlas \nrealidad.',
+            l10n.contactPageDescription,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: colors.onSurfaceOpacity20,
@@ -57,7 +58,7 @@ class ContactMe extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Envíame un mensaje',
+                      l10n.contactPageSendMessage,
                       style: TextStyle(
                         color: colors.onSurface,
                         fontSize: 16,
@@ -66,8 +67,7 @@ class ContactMe extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      'Completa el formulario y me pondré en contacto '
-                      'contigo lo antes posible.',
+                      l10n.contactPageFormDescription,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -77,16 +77,17 @@ class ContactMe extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const SizedBox(
-                      child: CustomTextField(label: 'Nombre'),
+                    SizedBox(
+                      child: CustomTextField(label: l10n.commonNameText),
                     ),
                     const SizedBox(height: 20),
-                    const SizedBox(
-                      child: CustomTextField(label: 'Email'),
+                    SizedBox(
+                      child: CustomTextField(label: l10n.commonEmailText),
                     ),
                     const SizedBox(height: 20),
-                    const SizedBox(
-                      child: CustomTextField(label: 'Tu mensaje', maxLines: 5),
+                    SizedBox(
+                      child: CustomTextField(
+                          label: l10n.commonMessageText, maxLines: 5),
                     ),
                     const SizedBox(height: 20),
                     SizedBox(
@@ -94,7 +95,7 @@ class ContactMe extends StatelessWidget {
                       child: CustomTextButton(
                         background: colors.onSurface,
                         themeButton: colors.surface,
-                        title: 'Enviar mensaje',
+                        title: l10n.contactPageSendMessageButton,
                         onPressed: () => openEmail('sanchezmati48@gmail.com'),
                       ),
                     ),
@@ -102,29 +103,29 @@ class ContactMe extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 50),
-              const Column(
+              Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CardContact(
                     iconData: Icons.email_outlined,
-                    label: 'Email',
+                    label: l10n.commonEmailText,
                     text: 'sanchezmati48@gmail.com',
                   ),
-                  SizedBox(height: 50),
-                  CardContact(
+                  const SizedBox(height: 50),
+                  const CardContact(
                     iconData: FontAwesome.linkedin,
                     label: 'LinkedIn',
                     text: '@Matias Sanchez',
                   ),
-                  SizedBox(height: 50),
-                  CardContact(
+                  const SizedBox(height: 50),
+                  const CardContact(
                     iconData: Icons.gamepad,
                     label: 'Itch.io',
                     text: '@matiassanchez48',
                   ),
-                  SizedBox(height: 50),
-                  CardContact(
+                  const SizedBox(height: 50),
+                  const CardContact(
                     iconData: FontAwesome.github,
                     label: 'Github',
                     text: '@MatiasSanchez48',

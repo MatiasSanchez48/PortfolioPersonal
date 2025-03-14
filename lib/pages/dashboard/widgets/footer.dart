@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
@@ -19,6 +20,7 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
@@ -46,8 +48,7 @@ class Footer extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      'Creando experiencias digitales excepcionales con'
-                      ' pasión y \ndedicación.',
+                      l10n.footerPageDescription,
                       style: TextStyle(
                         color: colors.onSurfaceOpacity50,
                         fontSize: 12,
@@ -58,8 +59,8 @@ class Footer extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Enlaces',
+                    Text(
+                      l10n.commonLinksText,
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 20),
@@ -69,7 +70,7 @@ class Footer extends StatelessWidget {
                         scrollController.position.minScrollExtent,
                       ),
                       child: Text(
-                        'Inicio',
+                        l10n.commonStartText,
                         style: TextStyle(
                           fontSize: 12,
                           color: colors.onSurfaceOpacity50,
@@ -83,7 +84,7 @@ class Footer extends StatelessWidget {
                         context.height * .85,
                       ),
                       child: Text(
-                        'Sobre Mi',
+                        l10n.commonAboutMeText,
                         style: TextStyle(
                           fontSize: 12,
                           color: colors.onSurfaceOpacity50,
@@ -97,7 +98,7 @@ class Footer extends StatelessWidget {
                         context.height * 1.63,
                       ),
                       child: Text(
-                        'Proyectos',
+                        l10n.commonProjectsText,
                         style: TextStyle(
                           fontSize: 12,
                           color: colors.onSurfaceOpacity50,
@@ -111,7 +112,7 @@ class Footer extends StatelessWidget {
                         context.height * 2.48,
                       ),
                       child: Text(
-                        'Contacto',
+                        l10n.commonContactText,
                         style: TextStyle(
                           fontSize: 12,
                           color: colors.onSurfaceOpacity50,
@@ -121,15 +122,15 @@ class Footer extends StatelessWidget {
                     const SizedBox(height: 20),
                   ],
                 ),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Redes Sociales',
-                      style: TextStyle(fontWeight: FontWeight.w600),
+                      l10n.commonSocialNetworksText,
+                      style: const TextStyle(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 20),
-                    SocialIcons(),
+                    const SizedBox(height: 20),
+                    const SocialIcons(),
                   ],
                 ),
               ],
@@ -140,7 +141,7 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             Text(
-              '© 2025 Matias Sanchez. Todos los derechos reservados.',
+              l10n.footerPageAutor,
               style: TextStyle(
                 fontSize: 12,
                 color: colors.onSurfaceOpacity50,

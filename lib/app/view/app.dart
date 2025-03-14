@@ -50,6 +50,7 @@ class _ViewAppState extends State<ViewApp> {
         theme: state.theme,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
+        locale: Locale(state.lenguage.name),
         routerConfig: appRouter.config(),
       ),
     );

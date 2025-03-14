@@ -9,7 +9,7 @@ Future<void> lauchUrl(String linkRedSocial) async {
   if (await canLaunchUrl(url)) {
     await launchUrl(url);
   } else {
-    throw Exception('Error al abrir la red social');
+    throw Exception('Error opening the social network');
   }
 }
 
@@ -19,15 +19,15 @@ Future<void> openEmail(String email) async {
     scheme: 'mailto',
     path: email,
     queryParameters: {
-      'subject': 'Consulta desde tu portafolio',
-      'body': 'Hola, quiero contactarte sobre...',
+      'subject': 'Consult from your portfolio',
+      'body': 'Hello, I would like to contact you about...',
     },
   );
 
   if (await canLaunchUrl(emailLaunchUri)) {
     await launchUrl(emailLaunchUri);
   } else {
-    throw Exception('No se puede abrir la aplicación de correo');
+    throw Exception('Cannot open the mail application');
   }
 }
 
@@ -46,6 +46,6 @@ Future<void> openPDF() async {
 
     html.Url.revokeObjectUrl(url);
   } catch (e) {
-    throw Exception('No se puede abrir la aplicación de correo');
+    throw Exception('Cannot open the CV in the application');
   }
 }

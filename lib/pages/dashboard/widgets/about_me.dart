@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 
 /// {@template AboutMe}
@@ -13,6 +14,7 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return DefaultTextStyle(
       style: TextStyle(
@@ -27,15 +29,13 @@ class AboutMe extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 60),
-            const Text(
-              'About me',
-              style: TextStyle(fontSize: 30),
+            Text(
+              l10n.commonAboutMeText,
+              style: const TextStyle(fontSize: 30),
             ),
             const SizedBox(height: 20),
             Text(
-              'Enfocado en crear aplicaciones modernas y eficientes.'
-              ' Disfruto resolviendo problemas del mundo real a través'
-              ' de la tecnología y mejorando continuamente mis habilidades.',
+              l10n.aboutMePageDescription,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: colors.onSurfaceOpacity20,
@@ -43,11 +43,7 @@ class AboutMe extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             Text(
-              'Con experiencia en desarrollo móvil'
-              ' (Flutter/Dart), tecnologías backend (.NET, MongoDB, SQL),'
-              ' desarrollo web (React, HTML, CSS, JavaScript) y desarrollo de'
-              ' videojuegos (Unity, C#), siempre me entusiasmado a aprender y'
-              ' crecer como desarrollador.',
+              l10n.aboutMePageDescriptionPartTwo,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: colors.onSurfaceOpacity20,
@@ -85,9 +81,9 @@ class AboutMe extends StatelessWidget {
               color: colors.onSurfaceOpacity50,
             ),
             const SizedBox(height: 35),
-            const Text(
-              'Technologies',
-              style: TextStyle(fontSize: 25),
+            Text(
+              l10n.aboutMePageTechnologies,
+              style: const TextStyle(fontSize: 25),
             ),
             const SizedBox(height: 20),
             Wrap(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
+import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
 import 'package:portfolio_personal/utils/functions/functions.dart';
 
@@ -19,6 +20,7 @@ class HeroCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
+    final l10n = context.l10n;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -34,26 +36,24 @@ class HeroCustom extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Spacer(),
-            const Text(
-              'Bienvenido a mi portafolio',
-              style: TextStyle(
+            Text(
+              l10n.heroPageWelcome,
+              style: const TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 25),
-            const Text(
-              'Código,creatividad\ny tecnología.',
-              style: TextStyle(
+            Text(
+              l10n.heroPageDescription,
+              style: const TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 45,
               ),
             ),
             const SizedBox(height: 25),
             Text(
-              'Desarrollo aplicaciones web, móviles y videojuegos,combinando\n'
-              'innovación y eficiencia. Especializado en Flutter, .NET, '
-              'React y Unity\npara llevar cada idea al siguiente nivel.',
+              l10n.heroPageDescriptionPartTwo,
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 13,
@@ -65,7 +65,7 @@ class HeroCustom extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomTextButton(
-                  title: 'Ver proyectos',
+                  title: l10n.heroPageShowProjects,
                   onPressed: () => scroll(
                     scrollController,
                     context.height * 1.63,
@@ -75,8 +75,8 @@ class HeroCustom extends StatelessWidget {
                   themeButton: colors.surface,
                 ),
                 const SizedBox(width: 10),
-                const CustomTextButton(
-                  title: 'Descargar CV',
+                CustomTextButton(
+                  title: l10n.heroPageDowloadCV,
                   onPressed: openPDF,
                 ),
               ],

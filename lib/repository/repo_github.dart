@@ -28,7 +28,7 @@ class RepoGithub {
           .toList();
     } catch (e) {
       if (kDebugMode) {
-        print('Error al obtener repositorios: $e');
+        print('Error getting repositories: $e');
       }
       return [];
     }
