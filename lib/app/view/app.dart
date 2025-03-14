@@ -5,7 +5,11 @@ import 'package:portfolio_personal/app/bloc/bloc_app.dart';
 import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/bloc/bloc_dashboard.dart';
 
+/// {@template MyApp}
+/// My App with providers and router
+/// {@endtemplate}
 class MyApp extends StatelessWidget {
+  /// {@macro MyApp}
   const MyApp({super.key});
 
   @override
@@ -25,7 +29,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// {@template ViewApp}
+/// View App with MaterialApp
+/// {@endtemplate}
 class ViewApp extends StatefulWidget {
+  /// {@macro ViewApp}
   const ViewApp({super.key});
 
   @override

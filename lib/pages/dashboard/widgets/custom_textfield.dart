@@ -19,6 +19,7 @@ class CustomTextField extends StatelessWidget {
     final colors = context.colors;
 
     return TextField(
+      
       maxLines: maxLines,
       style: TextStyle(
         color: colors.onSurface,

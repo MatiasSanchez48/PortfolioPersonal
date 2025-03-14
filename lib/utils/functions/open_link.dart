@@ -17,9 +17,10 @@ Future<void> openEmail(String email) async {
   final emailLaunchUri = Uri(
     scheme: 'mailto',
     path: email,
-    query: Uri.encodeFull(
-      'subject=Asunto del correo&body=Contenido del correo',
-    ),
+    queryParameters: {
+      'subject': 'Consulta desde tu portafolio',
+      'body': 'Hola, quiero contactarte sobre...',
+    },
   );
 
   if (await canLaunchUrl(emailLaunchUri)) {

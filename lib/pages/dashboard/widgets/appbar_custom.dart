@@ -39,7 +39,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
             ),
             const SizedBox(width: 15),
             Text(
-              'PortFolio.',
+              'Matias Sanchez',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
             ButtonAppBar(
               onTap: () => scroll(
                 scrollController,
-                context.height * .85,
+                context.height * .9,
               ),
               text: 'Sobre Mi',
             ),

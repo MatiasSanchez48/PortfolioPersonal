@@ -5,31 +5,26 @@ import 'package:portfolio_personal/theme/theme_default.dart';
 part 'bloc_app_event.dart';
 part 'bloc_app_state.dart';
 
+/// {@template BlocApp}
+/// Bloc for App
+/// {@endtemplate}
+
 class BlocApp extends Bloc<BlocAppEvent, BlocAppState> {
+  /// {@macro BlocApp}
   BlocApp() : super(BlocAppStateInitial(themeDefault)) {
     on<BlocAppEventToggleTheme>(_chageTheme);
   }
 
-  Future<void> _chageTheme(
+  /// Change theme
+  void _chageTheme(
     BlocAppEventToggleTheme event,
     Emitter<BlocAppState> emit,
-  ) async {
-    if (event.themeDark) {
+  ) =>
       emit(
         BlocAppUpdatedState.desde(
           state,
-          theme: themeDark,
+          theme: event.themeDark ? themeDark : themeDefault,
           themeDark: event.themeDark,
         ),
       );
-    } else {
-      emit(
-        BlocAppUpdatedState.desde(
-          state,
-          theme: themeDefault,
-          themeDark: event.themeDark,
-        ),
-      );
-    }
-  }
 }

@@ -29,10 +29,9 @@ class AboutMe extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Soy un apasionado desarrollador de software, enfocado en crear '
-              'aplicaciones modernas y eficientes. Disfruto resolviendo '
-              'problemas del mundo real a través de la tecnología y mejorando'
-              ' continuamente mis habilidades.',
+              'Enfocado en crear aplicaciones modernas y eficientes.'
+              ' Disfruto resolviendo problemas del mundo real a través'
+              ' de la tecnología y mejorando continuamente mis habilidades.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: colors.onSurfaceOpacity20,
@@ -43,7 +42,7 @@ class AboutMe extends StatelessWidget {
               'Con experiencia en desarrollo móvil'
               ' (Flutter/Dart), tecnologías backend (.NET, MongoDB, SQL),'
               ' desarrollo web (React, HTML, CSS, JavaScript) y desarrollo de'
-              ' videojuegos (Unity, C#), siempre me entusiasma aprender y'
+              ' videojuegos (Unity, C#), siempre me entusiasmado a aprender y'
               ' crecer como desarrollador.',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -71,7 +70,7 @@ class AboutMe extends StatelessWidget {
                     'Game Engines: Unity (C#)',
                     'Game Mechanics: 2D/3D movement, physics, shooting mechanics',
                     'Multiplayer: Basic implementation with Photon/Netcode',
-                    'Platforms: PC',
+                    'Platforms: PC and mobile',
                   ],
                 ),
               ],
@@ -82,6 +81,39 @@ class AboutMe extends StatelessWidget {
               color: colors.onSurfaceOpacity50,
             ),
             const SizedBox(height: 35),
+            const Text(
+              'Technologies',
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(height: 20),
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: 10,
+              runSpacing: 5,
+              children: [
+                ...[
+                  'Flutter',
+                  'Dart',
+                  'Unity',
+                  'C#',
+                  'MongoDB',
+                  'SQL',
+                  '.NET',
+                  'HTML',
+                  'CSS',
+                  'JavaScript',
+                  'React',
+                  'Node.js',
+                ].map(
+                  (skill) => CustomChip(
+                    backgroundColor: colors.onSurfaceOpacity50,
+                    textColor: colors.surface,
+                    title: skill,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 60),
           ],
         ),
       ),

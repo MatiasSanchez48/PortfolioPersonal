@@ -1,7 +1,12 @@
 part of 'bloc_dashboard.dart';
 
 @immutable
+
+/// {@template BlocDashboardState}
+/// State for [BlocDashboard]
+/// {@endtemplate}
 class BlocDashboardState {
+  /// {@macro BlocDashboardState}
   const BlocDashboardState._({
     this.repos = const [],
   });
@@ -13,13 +18,17 @@ class BlocDashboardState {
           repos: repos ?? state.repos,
         );
 
-  ///
+  /// List of [Project]
   final List<Project> repos;
 
   List<Object> get props => [];
 }
 
+/// {@template BlocDashboardState}
+/// State for [BlocDashboard]
+/// {@endtemplate}
 class BlocDashboardStateInitial extends BlocDashboardState {
+  /// {@macro BlocDashboardState}
   const BlocDashboardStateInitial() : super._();
 }
 

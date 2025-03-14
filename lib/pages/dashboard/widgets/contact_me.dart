@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_font_icons/flutter_font_icons.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
+import 'package:portfolio_personal/utils/functions/functions.dart';
 
 class ContactMe extends StatelessWidget {
   const ContactMe({super.key});
@@ -89,7 +91,7 @@ class ContactMe extends StatelessWidget {
                         background: colors.onSurface,
                         themeButton: colors.surface,
                         title: 'Enviar mensaje',
-                        onPressed: () {},
+                        onPressed: () => openEmail('sanchezmati48@gmail.com'),
                       ),
                     ),
                   ],
@@ -107,15 +109,21 @@ class ContactMe extends StatelessWidget {
                   ),
                   SizedBox(height: 50),
                   CardContact(
-                    iconData: Icons.phone_outlined,
-                    label: 'Telefono',
-                    text: '+52 1 55 55 55 55',
+                    iconData: FontAwesome.linkedin,
+                    label: 'LinkedIn',
+                    text: '@Matias Sanchez',
                   ),
                   SizedBox(height: 50),
                   CardContact(
-                    iconData: Icons.message_outlined,
-                    label: 'Redes Sociales',
-                    text: '@sanchezmati48',
+                    iconData: Icons.gamepad,
+                    label: 'Itch.io',
+                    text: '@matiassanchez48',
+                  ),
+                  SizedBox(height: 50),
+                  CardContact(
+                    iconData: FontAwesome.github,
+                    label: 'Github',
+                    text: '@MatiasSanchez48',
                   ),
                 ],
               ),
