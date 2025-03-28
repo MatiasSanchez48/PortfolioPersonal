@@ -4,7 +4,7 @@ import 'package:portfolio_personal/extensions/extensions.dart';
 /// {@template CustomTextButton}
 /// Custom Text Button for App.
 /// {@endtemplate}
-class CustomTextButton extends StatelessWidget {
+class CustomTextButton extends StatefulWidget {
   /// {@macro CustomTextButton}
   const CustomTextButton({
     required this.title,
@@ -31,48 +31,64 @@ class CustomTextButton extends StatelessWidget {
   final Color? themeButton;
 
   @override
+  State<CustomTextButton> createState() => _CustomTextButtonState();
+}
+
+class _CustomTextButtonState extends State<CustomTextButton> {
+  bool _isHovered = false;
+
+  @override
   Widget build(BuildContext context) {
     final colors = context.colors;
 
-    return TextButton(
-      style: ButtonStyle(
-        backgroundColor: WidgetStatePropertyAll(background ?? colors.surface),
-        shape: WidgetStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
-            side: BorderSide(
-              color: colors.onSurfaceOpacity20,
-              width: .8,
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: TextButton(
+        style: ButtonStyle(
+          backgroundColor:
+              WidgetStatePropertyAll(widget.background ?? colors.surface),
+          shape: WidgetStatePropertyAll(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+              side: BorderSide(
+                color: colors.onSurfaceOpacity20,
+                width: .8,
+              ),
             ),
           ),
         ),
-      ),
-      onPressed: onPressed,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 10,
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (icon != null) ...[
-              Icon(
-                icon,
-                color: themeButton ?? colors.onSurface,
-                size: 18,
-              ),
-              const SizedBox(width: 10),
-            ],
-            Text(
-              title,
-              style: TextStyle(
-                color: themeButton ?? colors.onSurface,
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-              ),
+        onPressed: widget.onPressed,
+        child: AnimatedScale(
+          duration: const Duration(milliseconds: 200),
+          scale: _isHovered ? 1.15 : 1.0,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
             ),
-          ],
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (widget.icon != null) ...[
+                  Icon(
+                    widget.icon,
+                    color: widget.themeButton ?? colors.onSurface,
+                    size: 18,
+                  ),
+                  const SizedBox(width: 10),
+                ],
+                Text(
+                  widget.title,
+                  style: TextStyle(
+                    color: widget.themeButton ?? colors.onSurface,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

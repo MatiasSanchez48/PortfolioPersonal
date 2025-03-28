@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
@@ -9,10 +10,7 @@ import 'package:portfolio_personal/utils/functions/functions.dart';
 /// {@endtemplate}
 class HeroCustom extends StatelessWidget {
   /// {@macro HeroCustom}
-  const HeroCustom({
-    required this.scrollController,
-    super.key,
-  });
+  const HeroCustom({required this.scrollController, super.key});
 
   /// Scroll Controller to scroll to the next section.
   final ScrollController scrollController;
@@ -42,7 +40,9 @@ class HeroCustom extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 fontSize: 18,
               ),
-            ),
+            )
+                .animate(onComplete: (controller) => controller.repeat())
+                .shimmer(duration: 3.seconds),
             const SizedBox(height: 25),
             Text(
               l10n.heroPageDescription,
@@ -50,7 +50,10 @@ class HeroCustom extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 fontSize: 45,
               ),
-            ),
+            ).animate(onComplete: (controller) => controller.repeat()).shimmer(
+                  duration: 4.seconds,
+                  color: colors.primary,
+                ),
             const SizedBox(height: 25),
             Text(
               l10n.heroPageDescriptionPartTwo,
@@ -59,7 +62,9 @@ class HeroCustom extends StatelessWidget {
                 fontSize: 13,
                 color: colors.onSurfaceOpacity20,
               ),
-            ),
+            )
+                .animate(onComplete: (controller) => controller.repeat())
+                .shimmer(duration: 5.seconds),
             const SizedBox(height: 50),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
-import 'package:portfolio_personal/extensions/extensions.dart';
 import 'package:portfolio_personal/utils/utils.dart';
 
 /// {@template RepoGithub}
@@ -21,25 +20,23 @@ enum RedSocial {
       };
 
   /// get icon of red social.
-  static Icon icon(RedSocial redSocial, BuildContext context) {
-    final colors = context.colors;
-
+  static Icon icon(RedSocial redSocial, Color color) {
     return switch (redSocial) {
       RedSocial.linkedIn => Icon(
           FontAwesome.linkedin,
-          color: colors.onSurfaceOpacity20,
+          color: color,
         ),
       RedSocial.gitHub => Icon(
           FontAwesome.github,
-          color: colors.onSurfaceOpacity20,
+          color: color,
         ),
       RedSocial.gmail => Icon(
           Icons.email,
-          color: colors.onSurfaceOpacity20,
+          color: color,
         ),
       RedSocial.itchIo => Icon(
           Icons.gamepad,
-          color: colors.onSurfaceOpacity20,
+          color: color,
         ),
     };
   }
