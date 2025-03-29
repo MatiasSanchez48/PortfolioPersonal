@@ -78,7 +78,7 @@ class CustomCard extends StatelessWidget {
                       color: colors.tertiary,
                       borderRadius: BorderRadius.circular(50),
                       image: const DecorationImage(
-                        image: AssetImage('images/avatar.png'),
+                        image: AssetImage('assets/images/avatar.png'),
                         fit: BoxFit.cover,
                         opacity: .2,
                       ),

@@ -58351,7 +58351,7 @@ A.uG.prototype={
 k(a){return this.b},
 $ic3:1}
 A.y6.prototype={
-gqC(){return"images/avatar.png"},
+gqC(){return"assets/images/avatar.png"},
 As(a){var s,r={},q=a.a
 if(q==null)q=$.oW()
 r.a=r.b=null
