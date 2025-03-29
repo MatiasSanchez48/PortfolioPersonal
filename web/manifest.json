@@ -3,19 +3,19 @@
     "short_name": "Matias Sanchez",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#00000000",
-    "theme_color": "#00000000FF",
-    "description": "Esta es mi página web, mi portfolio personal, donde puedes encontrar información sobre mis proyectos, habilidades, y formas de contacto. Aquí comparto algunos de los trabajos que he realizado, desde aplicaciones móviles y web hasta soluciones backend, con el objetivo de mostrar mi experiencia y capacidades en el desarrollo de software. ¡Explora mis proyectos y no dudes en ponerte en contacto!",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A Very Good Project created by Very Good CLI.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "assets/images/avatar.png",
+            "src": "icons/Icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "assets/images/avatar.png",
+            "src": "icons/Icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
