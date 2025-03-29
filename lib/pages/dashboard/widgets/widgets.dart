@@ -14,3 +14,4 @@ export 'hero_custom.dart';
 export 'icon_change_theme.dart';
 export 'project.dart';
 export 'social_icons.dart';
+export 'text_hover.dart';

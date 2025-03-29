@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio_personal/app/bloc/bloc_app.dart';
+import 'package:portfolio_personal/extensions/colors_scheme.dart';
 import 'package:portfolio_personal/extensions/context.dart';
 import 'package:portfolio_personal/l10n/l10n.dart';
 import 'package:portfolio_personal/pages/dashboard/widgets/widgets.dart';
@@ -99,24 +100,42 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
               child: BlocBuilder<BlocApp, BlocAppState>(
                 builder: (context, state) {
                   return ListTile(
-                    title: Text(state.lenguage.name),
-                    trailing: DropdownButton<Lenguages>(
-                      value: state.lenguage,
-                      onChanged: (Lenguages? newValue) {
-                        if (newValue != null) {
-                          context.read<BlocApp>().add(
-                                BlocAppEventChangeLenguage(
-                                  lenguage: newValue,
-                                ),
-                              );
-                        }
-                      },
-                      items: Lenguages.values.map((Lenguages language) {
-                        return DropdownMenuItem<Lenguages>(
-                          value: language,
-                          child: Text(language.name),
-                        );
-                      }).toList(),
+                    trailing: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      child: DropdownButton<Lenguages>(
+                        key: ValueKey<Lenguages>(state.lenguage),
+                        value: state.lenguage,
+                        onChanged: (Lenguages? newValue) {
+                          if (newValue != null) {
+                            context.read<BlocApp>().add(
+                                  BlocAppEventChangeLenguage(
+                                    lenguage: newValue,
+                                  ),
+                                );
+                          }
+                        },
+                        items: Lenguages.values.map((Lenguages language) {
+                          return DropdownMenuItem<Lenguages>(
+                            value: language,
+                            child: Text(
+                              language.name,
+                              style: TextStyle(
+                                color: colors.onSurfaceOpacity60,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: context.fontFamily,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        icon: Icon(Icons.language, color: colors.onSurface),
+                        dropdownColor: colors.surface,
+                        elevation: 5,
+                        underline: Container(
+                          height: 2,
+                          color: colors.primary,
+                        ),
+                      ),
                     ),
                   );
                 },

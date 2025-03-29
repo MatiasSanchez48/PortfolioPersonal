@@ -9,10 +9,7 @@ import 'package:portfolio_personal/utils/utils.dart';
 /// {@endtemplate}
 class Footer extends StatelessWidget {
   /// {@macro Footer}
-  const Footer({
-    required this.scrollController,
-    super.key,
-  });
+  const Footer({required this.scrollController, super.key});
 
   /// Scroll Controller to scroll.
   final ScrollController scrollController;
@@ -61,63 +58,39 @@ class Footer extends StatelessWidget {
                   children: [
                     Text(
                       l10n.commonLinksText,
-                      style: TextStyle(fontWeight: FontWeight.w600),
+                      style: const TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 20),
-                    InkWell(
+                    HoverText(
                       onTap: () => scroll(
                         scrollController,
                         scrollController.position.minScrollExtent,
                       ),
-                      child: Text(
-                        l10n.commonStartText,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: colors.onSurfaceOpacity50,
-                        ),
-                      ),
+                      text: l10n.commonStartText,
                     ),
                     const SizedBox(height: 20),
-                    InkWell(
+                    HoverText(
                       onTap: () => scroll(
                         scrollController,
                         context.height * .85,
                       ),
-                      child: Text(
-                        l10n.commonAboutMeText,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: colors.onSurfaceOpacity50,
-                        ),
-                      ),
+                      text: l10n.commonAboutMeText,
                     ),
                     const SizedBox(height: 20),
-                    InkWell(
+                    HoverText(
                       onTap: () => scroll(
                         scrollController,
                         context.height * 1.63,
                       ),
-                      child: Text(
-                        l10n.commonProjectsText,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: colors.onSurfaceOpacity50,
-                        ),
-                      ),
+                      text: l10n.commonProjectsText,
                     ),
                     const SizedBox(height: 20),
-                    InkWell(
+                    HoverText(
                       onTap: () => scroll(
                         scrollController,
                         context.height * 2.48,
                       ),
-                      child: Text(
-                        l10n.commonContactText,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: colors.onSurfaceOpacity50,
-                        ),
-                      ),
+                      text: l10n.commonContactText,
                     ),
                     const SizedBox(height: 20),
                   ],

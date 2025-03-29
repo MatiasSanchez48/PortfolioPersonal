@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:portfolio_personal/extensions/extensions.dart';
 
 /// {@template ButtonAppBar}
@@ -32,20 +33,30 @@ class _ButtonAppBarState extends State<ButtonAppBar> {
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: InkWell(
-        onHover: (value) => setState(() => _hover = value),
-        onTap: widget.onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(5),
+      child: SizedBox(
+        width: 175,
+        child: InkWell(
+          onHover: (value) => setState(() => _hover = value),
+          onTap: widget.onTap,
           child: Text(
             widget.text,
+            textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: _hover ? 18 : 16,
               color: _hover
                   ? colors.onSurfaceOpacity50
                   : colors.onSurfaceOpacity20,
             ),
-          ),
+          )
+              .animate(
+                target: _hover ? 1 : 0,
+                onComplete: (controller) =>
+                    _hover ? controller.repeat() : controller.stop(),
+              )
+              .shimmer(
+                delay: .5.seconds,
+                duration: 1.seconds,
+              ),
         ),
       ),
     );
