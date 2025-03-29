@@ -34,7 +34,9 @@ migrate_working_dir/
 .packages
 .pub-cache/
 .pub/
-build/
+build/*
+# Permite la carpeta build/web para el despliegue web
+!build/web/
 flutter_*.png
 linked_*.ds
 unlinked.ds
@@ -90,7 +92,6 @@ coverage/
 packages/**/pubspec.lock
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
