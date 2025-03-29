@@ -81,7 +81,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
             ButtonAppBar(
               onTap: () => scroll(
                 scrollController,
-                context.height * 1.63,
+                context.height * 1.69,
               ),
               text: l10n.commonProjectsText,
             ),

@@ -48,6 +48,8 @@ class _ViewAppState extends State<ViewApp> {
     return BlocBuilder<BlocApp, BlocAppState>(
       builder: (context, state) => MaterialApp.router(
         theme: state.theme,
+        title: 'Matias Sanchez',
+        debugShowCheckedModeBanner: false,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         locale: Locale(state.lenguage.name),
