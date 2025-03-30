@@ -1,5 +1,23 @@
 # Portfolio Personal
+<img src="assets/images/page_view.png" width="500" alt="Descripción">
 
+---
+# `View Page`
+<img src="assets/gif/view_page.gif" width="500" alt="Descripción">
+
+---
+# `Change Theme`
+<img src="assets/gif/change_theme.gif" width="500" alt="Descripción">
+
+---
+# `Change Lenguage`
+<img src="assets/gif/change_lenguage.gif" width="500" alt="Descripción">
+
+---
+# `Animations`
+<img src="assets/gif/animations.gif" width="500" alt="Descripción">
+
+---
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
