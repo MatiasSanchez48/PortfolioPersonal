@@ -1,21 +1,21 @@
 # Portfolio Personal
-<img src="assets/images/page_view.png" width="500" alt="Descripción">
+<img src="assets/images/page_view.png"  alt="Descripción">
 
 ---
 # `View Page`
-<img src="assets/gif/view_page.gif" width="500" alt="Descripción">
+<img src="assets/gif/view_page.gif" alt="Descripción">
 
 ---
 # `Change Theme`
-<img src="assets/gif/change_theme.gif" width="500" alt="Descripción">
+<img src="assets/gif/change_theme.gif"  alt="Descripción">
 
 ---
 # `Change Lenguage`
-<img src="assets/gif/change_lenguage.gif" width="500" alt="Descripción">
+<img src="assets/gif/change_lenguage.gif" alt="Descripción">
 
 ---
 # `Animations`
-<img src="assets/gif/animations.gif" width="500" alt="Descripción">
+<img src="assets/gif/animations.gif"  alt="Descripción">
 
 ---
 ![coverage][coverage_badge]
